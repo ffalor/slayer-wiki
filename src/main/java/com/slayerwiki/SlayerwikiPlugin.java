@@ -239,7 +239,7 @@ public class SlayerwikiPlugin extends Plugin
 
 					LinkBrowser.browse(urlBuilder.build().toString());
 				} else {
-					// Lookup with name (good for monsters with many types like beers and bandits)
+					// Lookup with name (good for monsters with many types like bears and bandits)
 					HttpUrl.Builder urlBuilder = WIKI_BASE.newBuilder().addQueryParameter("name", slayerTask);
 
 					LinkBrowser.browse(urlBuilder.build().toString());
