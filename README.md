@@ -1,12 +1,23 @@
-# Wellness Notifications
+# Slayer Wiki
 
-The goal of this plugin is send helpful reminders about small steps users can take to improve their health without any XP waste!
+This plugin will add a Wiki menu option to slayer equipment.
 
-## What it Does
+# What it Does
 
--   Posture check to notifiy users to be mindful of their posture.
--   Notifies users to be mindful of the very simple 20 | 20 | 20 rule to prevent digitial Eye Strain. [More Info Here](https://www.aoa.org/documents/infographics/SYVM2016Infographics.pdf)
+The Wiki menu option will lookup your current slayer task on the OSRS wiki. This can be used as a quick way to learn more about your slayer task.
 
-## Future Plans
+Gear with Wiki menu option:
 
-I have a few features I am activitly working on improve functionality. They will be shared at a later date.
+-   Slayer Gem
+-   Eternal Slayer Gem
+-   Slayer Helmet (all forms)
+-   Slayer Rings (all forms)
+-   Black Mask
+
+The wiki usually includes important information like:
+
+-   Monster weakness
+-   Monster strategies
+-   Monster drop table
+-   Monster locations
+-   Useful tips
