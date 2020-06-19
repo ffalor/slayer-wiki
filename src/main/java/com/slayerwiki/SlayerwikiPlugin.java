@@ -231,19 +231,17 @@ public class SlayerwikiPlugin extends Plugin
 
 				final SlayerConfig slayerConfig = configManager.getConfig(SlayerConfig.class);
 				final String slayerTask = slayerConfig.taskName();
-				final Integer taskId = SLAYER_TASKS.get(slayerTask);
+				final Integer taskId = SLAYER_TASKS.get(slayerTask.toLowerCase());
+
+				HttpUrl.Builder urlBuilder = WIKI_BASE.newBuilder();
 
 				if (taskId != null) {
 					// Lookup with ID if we can
-					HttpUrl.Builder urlBuilder = WIKI_BASE.newBuilder().addQueryParameter("id", taskId.toString());
-
-					LinkBrowser.browse(urlBuilder.build().toString());
-				} else {
-					// Lookup with name (good for monsters with many types like bears and bandits)
-					HttpUrl.Builder urlBuilder = WIKI_BASE.newBuilder().addQueryParameter("name", slayerTask);
-
-					LinkBrowser.browse(urlBuilder.build().toString());
+					urlBuilder.addQueryParameter("id", taskId.toString());
 				}
+					// Fallback lookup with name (good for monsters with many types like bears and bandits)
+					urlBuilder.addQueryParameter("name", slayerTask);
+					LinkBrowser.browse(urlBuilder.build().toString());
 			}
 		}
 	}
